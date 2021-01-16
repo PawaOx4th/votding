@@ -1,0 +1,6 @@
+// @import 'color';
+@import './font';
+@import './mixin';
+
+@include extend-fonts($fonts-collection, null);
+// @include extend-fonts($fonts-collection-second, null);

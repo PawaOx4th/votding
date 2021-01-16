@@ -6,15 +6,7 @@
           <logo />
         </b-col>
         <b-col cols="12" class="mt-5">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Dignissimos, non? Tenetur dolorem nemo ratione, ipsum labore,
-            facilis maxime veritatis possimus dolor excepturi ad? Dolorem, ad
-            assumenda labore magnam nihil, quaerat nesciunt praesentium,
-            consequatur similique inventore adipisci ipsam ut quibusdam
-            voluptatum consequuntur iure neque accusantium voluptates quasi
-            porro recusandae iste? Recusandae?
-          </p>
+          <h1>Votding</h1>
         </b-col>
       </b-row>
     </b-container>
@@ -40,4 +32,6 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@import './style.scss';
+</style>

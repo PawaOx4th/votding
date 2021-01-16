@@ -1,0 +1,52 @@
+@mixin font-face($fonts, $path: null) {
+  @if ($path) {
+    $path: $path;
+  } @else {
+    $path: '../../fonts/';
+  }
+
+  @each $key, $font in $fonts {
+    @font-face {
+      font-family: '#{ $font }';
+      src: url($path + $font + '.ttf') format('truetype');
+      //   src: url($path + $font + '.eot');
+      //   src: url($path + $font + '.eot') format('embedded-opentype'),
+      //     url($path + $font + '.woff') format('woff'),
+      //     url($path + $font + '.woff2') format('woff2'),
+      //     url($path + $font + '.ttf') format('truetype'),
+      //     url($path + $font + '.svg#' + $font) format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  }
+}
+
+@mixin extend-fonts($fonts-en, $fonts-th, $lang: 'th') {
+  @if ($fonts-en) {
+    @each $key, $font in $fonts-en {
+      %#{$key} {
+        font-family: map-get($fonts-en, $key), ' Arial, sans-serif';
+        font-weight: normal;
+        font-style: normal;
+        @if ($fonts-th) {
+          :lang(#{$lang}) & {
+            @if ($fonts-th) {
+              font-family: map-get($fonts-th, $key), ' Arial, sans-serif';
+            } @else {
+              font-family: 'Arial, sans-serif';
+            }
+            font-weight: normal;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin font-family($name: 'Helvetica, Arial, sans-serif') {
+  font-family: $name, 'Helvetica, Arial, sans-serif';
+  font-weight: normal;
+  font-style: normal;
+}

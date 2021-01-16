@@ -16,7 +16,16 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['@/assets/scss/_font.scss', '@/assets/scss/global.scss'],
+  css: [
+    // '@/assets/scss/_font.scss',
+    // '@/assets/scss/_mixin.scss',
+    // '@/assets/scss/_variable.scss',
+    // '@/assets/scss/global.scss',
+    // '~/assets/scss/transitions.scss',
+
+    '~/assets/scss/fonts.scss',
+    '~/assets/scss/global.scss',
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],

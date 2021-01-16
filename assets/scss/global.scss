@@ -1,5 +1,6 @@
-@import './variable';
-
-p {
-  @include font-main;
+@import './assets/_variable';
+body {
+  //   background: transparent;
+  font-size: 14px;
+  @extend %font-main-regular;
 }

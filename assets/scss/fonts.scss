@@ -1,0 +1,5 @@
+@import './assets/font';
+@import './assets/mixin';
+
+@include font-face($fonts-collection, $path: '~@/assets/fonts/Rubik/');
+// @include font-face($fonts-collection-second, $path: '~@/assets/fonts/cormorant-garamond/');
