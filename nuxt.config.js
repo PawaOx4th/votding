@@ -1,4 +1,5 @@
 export default {
+  mode: 'universal',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   server: {
     port: process.env.PORT || 3000, // default: 3000

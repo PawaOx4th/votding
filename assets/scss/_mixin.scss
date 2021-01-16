@@ -1,10 +1,4 @@
-@font-face {
-  font-family: 'Rubik-Regular';
-  src: url('./../font/Rubik/Rubik-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import './font';
 
 @mixin font-main {
   font-family: 'Rubik-Regular';

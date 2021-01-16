@@ -1,40 +1,43 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <p>{{ msg }}</p>
-      <b-button>Button</b-button>
-      <b-button variant="danger">Button</b-button>
-      <b-button variant="success">Button</b-button>
-      <b-button variant="outline-primary">Button</b-button>
-    </div>
+  <div>
+    <b-container>
+      <b-row>
+        <b-col cols="12" class="d-flex">
+          <logo />
+        </b-col>
+        <b-col cols="12" class="mt-5">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos, non? Tenetur dolorem nemo ratione, ipsum labore,
+            facilis maxime veritatis possimus dolor excepturi ad? Dolorem, ad
+            assumenda labore magnam nihil, quaerat nesciunt praesentium,
+            consequatur similique inventore adipisci ipsam ut quibusdam
+            voluptatum consequuntur iure neque accusantium voluptates quasi
+            porro recusandae iste? Recusandae?
+          </p>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { User } from '@/type/user'
+import Logo from '@/components/Logo.vue'
+// import Logo from '~/components/Logo.vue'
 
 export default Vue.extend({
-  data() {
-    return {
-      msg: 'helloworld',
-      user: {},
-    }
+  components: {
+    Logo,
   },
   mounted() {
-    const users: User = {
-      name: 'AAAA',
-      age: 5050,
-    }
-
-    this.user = { ...users }
-
-    console.log('users :', users)
+    this.$axios
+      .$get('https://jsonplaceholder.typicode.com/todos/1')
+      .then((res: any) => {
+        console.warn('RES:', res)
+      })
   },
 })
 </script>
 
-<style lang="scss" scoped>
-@import './pages/style.scss';
-</style>
+<style scoped></style>
