@@ -58,4 +58,8 @@ export default {
     // choose to suit your project
     interval: 2000,
   },
+  router: {
+    base: '/',
+    routeNameSplitter: '/',
+  },
 }
