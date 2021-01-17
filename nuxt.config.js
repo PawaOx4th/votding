@@ -1,5 +1,9 @@
 export default {
   mode: 'universal',
+  loading: {
+    color: '#00C58E',
+    height: '5px',
+  },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   server: {
     port: process.env.PORT || 3000, // default: 3000
@@ -28,7 +32,7 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/composition-api.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -38,6 +42,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/composition-api',
+    '@nuxtjs/dotenv',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
